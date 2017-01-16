@@ -1,20 +1,21 @@
 <?php
 
 class Conection{
-	private static $INSTANCE = NULL;
+	
 
 	private function __construct(){
 		echo "new objet created <br>";
 	}
 
 	public static function getInstance(){
-			
-			if(self::$INSTANCE instanceof Conection){
-			return self::$INSTANCE;
+		static $INSTANCE = NULL;		
+		if (null == $INSTANCE){
+			$INSTANCE = new static();
 		}else{
-			//regresar una instancia nueva del objeto
-			return self::$INSTANCE =  new Conection();
+			echo "using existing objet <br>";
 		}
+		return $INSTANCE;	
+
 	}	
 }
 

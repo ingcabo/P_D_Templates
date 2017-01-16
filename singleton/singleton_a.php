@@ -21,6 +21,10 @@ class Log{
 
 }
 
+$objet1 =  Log::getInstance();
+$objet2 =  Log::getInstance();
+$objet3 =  Log::getInstance();
+
 
 
 ?>
