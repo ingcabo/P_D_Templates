@@ -10,8 +10,7 @@ class Conection{
 	public static function getInstance(){
 		static $INSTANCE = NULL;		
 		if (null == $INSTANCE){
-			$INSTANCE =
-			 new static();
+			$INSTANCE = new static();
 		}else{
 			echo "using existing objet <br>";
 		}
