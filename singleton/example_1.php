@@ -1,5 +1,5 @@
 <?php
-//singleton
+//singleton 
 class Database{
 
 	public static $INSTACE;
