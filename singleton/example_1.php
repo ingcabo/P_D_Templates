@@ -34,6 +34,7 @@ $db2 = new DB();
 $db3 = new DB();
 */
 
+
 //echo $db->query();
 var_dump($db);
 var_dump($db2);
