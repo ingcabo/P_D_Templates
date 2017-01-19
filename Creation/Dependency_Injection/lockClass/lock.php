@@ -11,7 +11,7 @@ class lock
 
 	}
 	
-	public function unlook()
+	public function unlock()
 	{
 
 		$this->isLocked  = false;	
