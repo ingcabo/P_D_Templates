@@ -4,9 +4,9 @@ class Chest
 {
 
 	protected $lock;
-	protected $isLClosed;
+	protected $isClosed;
 
-	public function __construct($lock)
+	public function __construct(Lock $lock)
 	{
 
 		$this->lock = $lock;
@@ -16,10 +16,10 @@ class Chest
 	{
 
 		if($lock === true){
-			$this->lock= lock();			
+			$this->lock->lock();			
 		}
 	
-	$this->isLClosed = true;
+	$this->isClosed = true;
 	echo 'Closed';	
 	}
 
@@ -30,15 +30,15 @@ class Chest
 			$this->lock->unlock();
 		}
 
-		$this->isLClosed= false;
+		$this->isClosed= false;
 		echo "Opened";
 
 	}
 
-	public function isLClosed()
+	public function isClosed()
 	{
 
-		return $this->isLClosed;
+		return $this->isClosed;
 
 	}
 

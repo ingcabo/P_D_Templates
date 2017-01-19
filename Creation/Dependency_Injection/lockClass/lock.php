@@ -1,9 +1,9 @@
 <?php
 
-protected $isLocked;
-
-class lock 
+class Lock 
 {
+	protected $isLocked;
+
 	public function lock()
 	{
 

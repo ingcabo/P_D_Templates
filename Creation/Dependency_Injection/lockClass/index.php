@@ -1,9 +1,13 @@
 <?php
-require 'Chest.php'
-require 'Lock.php'
+require 'Chest.php';
+require 'Lock.php';
 
-$chest = new Chest();
+$lock = new Lock();
+
+$chest = new Chest($lock);
+
 
 $chest->close();
+$chest->open();
 
 ?>
